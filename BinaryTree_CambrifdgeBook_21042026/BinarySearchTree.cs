@@ -46,6 +46,7 @@ public class BinarySearchTree
         } 
     }
 
+    #region In-Order Traversal
     public void InOrder(Node theRoot)
     {
         if(theRoot != null)
@@ -56,6 +57,9 @@ public class BinarySearchTree
         }
     }
 
+    #endregion
+
+    #region Pre-Order Traversal
     public void PreOrder(Node theRoot)
     {
         if(theRoot != null)
@@ -66,6 +70,9 @@ public class BinarySearchTree
         }
     }
 
+    #endregion
+
+    #region Post-Order Traversal
     public void PostOrder(Node theRoot)
     {
         if(theRoot != null)
@@ -74,5 +81,23 @@ public class BinarySearchTree
             PostOrder(theRoot.Right);
             theRoot.DisplayNode();
         }
+    }
+
+    #endregion
+
+    public int FindMin()
+    {
+        Node current = root;
+        while(current.Left != null)
+            current = current.Left;
+        return current.Value;
+    }
+
+    public int FindMax()
+    {
+        Node current = root;
+        while(current.Right != null)
+            current = current.Right;
+        return current.Value;
     }
 }
