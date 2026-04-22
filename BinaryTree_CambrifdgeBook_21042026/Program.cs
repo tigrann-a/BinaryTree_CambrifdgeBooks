@@ -18,6 +18,16 @@ numbers.Insert(4);
 //numbers.PreOrder(numbers.root);
 //numbers.PostOrder(numbers.root);
 
-int minValue = numbers.FindMin();
-int maxValue = numbers.FindMax();
-Console.WriteLine($"Minimum value: {minValue}, Maximum value: {maxValue}");
+//int minValue = numbers.FindMin();
+//int maxValue = numbers.FindMax();
+//Console.WriteLine($"Minimum value: {minValue}, Maximum value: {maxValue}");
+
+int key = numbers.Find(18);
+if (key != -1)
+{
+    Console.WriteLine($"Key {key} found in the tree.");
+}
+else
+{
+    Console.WriteLine("Key not found in the tree.");
+}

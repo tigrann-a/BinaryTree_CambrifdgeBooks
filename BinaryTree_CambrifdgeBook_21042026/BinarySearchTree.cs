@@ -100,4 +100,26 @@ public class BinarySearchTree
             current = current.Right;
         return current.Value;
     }
+
+    public int Find(int key)
+    {
+        Node current = root;
+        while(current.Value != key)
+        {
+            if (key < current.Value)
+            {
+                current = current.Left;
+            }
+            else if(key > current.Value)
+            {
+                current = current.Right;
+            }
+            else if(current == null)
+            {
+                return -1;
+            }
+        }
+
+        return current.Value;
+    }
 }
